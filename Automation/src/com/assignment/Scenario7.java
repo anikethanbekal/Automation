@@ -40,5 +40,6 @@ public class Scenario7 {
 		s.takeScreenShot(driver, "Bluestone Scenario7-8");
 		String error = driver.findElement(By.xpath("//div[@class=\"formErrorContent\"]")).getText();
 		System.out.println("Error Message is : "+error);
+		driver.close();
 	}
 }
