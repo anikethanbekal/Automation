@@ -2,7 +2,10 @@ package com.assignment;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.xpath.XPath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -54,5 +57,9 @@ public class Scenario5 {
 		for (WebElement item : submenu2) {
 			System.out.println(item.getText());
 		}
+		//System.out.println(driver.findElement(By.xpath("//span[@class=\"p-wrap\"]/a[@id=\"pid_34346\"]")).getText());
+		List<WebElement> list = driver.findElements(By.xpath("//span[@class=\"b-price-wrapper\"]"));
+		ArrayList al=new ArrayList(list);
+		System.out.println(al);
 	}
 }
